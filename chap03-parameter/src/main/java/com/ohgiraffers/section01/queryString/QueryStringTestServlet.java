@@ -48,15 +48,15 @@ public class QueryStringTestServlet extends HttpServlet {
         * getParameterMap() - 모든 데이터를 key, value 형태로 일괄 반환
         *
         * */
+
         Map<String, String[]> requestMap = req.getParameterMap();
 
         for (Map.Entry<String, String[]> entry : requestMap.entrySet()) {
             String key = entry.getKey();
             String[] values = entry.getValue();
-
             System.out.println(key);
             for (String value : values) {
-                System.out.println("'"+ value + '"' );
+                System.out.println("'"+ value + "'" );
             }
         }
     }
