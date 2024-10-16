@@ -1,19 +1,17 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<!doctype html>
 <html>
 <head>
-    <title>게시글</title>
+    <title>게시글 작성</title>
 </head>
 <body>
 <h1>게시글 작성</h1>
-<br/>
 
-<form action="board" method="post">
-    <label for="title">제목:</label>
-    <input type="text" id="title" name="title" ><br>
-    <label for="content">내용:</label>
-    <textarea id="content" name="content"></textarea><br>
-    <input type="submit" value="작성하기">
+
+<form action='writepost' method='post'>
+    제목: <input type='text' name='title' ><br>
+    내용: <textarea name='content'></textarea><br>
+    <input type='submit' value='작성하기'>
 </form>
 </body>
 </html>

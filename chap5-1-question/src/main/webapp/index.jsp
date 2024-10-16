@@ -16,6 +16,7 @@
 <p> 일찍끝난 사람? - 이름은 한글 혹은 영문만 가능, 전화번호는 숫자만 가능</p>
 
 <form action="signup" method="post">
+
     <label for="name">이름:</label>
     <input type="text" id="name" name="name" ><br>
     <label for="phone">전화번호:</label>
@@ -25,6 +26,7 @@
     <label for="password2">비밀번호 확인:</label>
     <input type="password" id="password2" name="password2"><br>
     <input type="submit" value="회원가입">
+
 </form>
 </body>
 </html>

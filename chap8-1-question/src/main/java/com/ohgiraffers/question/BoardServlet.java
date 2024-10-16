@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/board")
+/*@WebServlet("/board")
 public class BoardServlet extends HttpServlet {
 
     @Override
@@ -32,4 +32,4 @@ public class BoardServlet extends HttpServlet {
         }
         out.close();
     }
-}
+} 내오답*/

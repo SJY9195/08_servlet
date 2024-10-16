@@ -15,10 +15,10 @@ public class PrintLoginSuccessServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String userId = (String)req.getAttribute("userId");
+        String userId = (String)req.getAttribute("userId"); // 서블릿에서 다른 서블릿에 줄 때
         System.out.println(userId);
 
-        String userId2 = req.getParameter("userId");
+        String userId2 = req.getParameter("userId"); // 사용자가 텍스트 적은것들 받아옴
         System.out.println(userId2);
 
         // 응답에 필요한 데이터가 준비되면 동적인 웹 페이지를 생성한다..
