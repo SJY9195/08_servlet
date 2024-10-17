@@ -11,7 +11,7 @@ public class EncodingFilter implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        encodingType = filterConfig.getInitParameter("encodingType");
+        encodingType = filterConfig.getInitParameter("encoding-type");
     }
 
     @Override

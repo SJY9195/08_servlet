@@ -12,10 +12,12 @@
 </head>
 <body>
 
-<form action="main" method="post">
+<h1>환영합니다! <%= request.getAttribute("userId")%> 님!</h1>
 
-</form>
+<!-- 나의 오답<form action="main" method="post">
 
-<a href=login.jsp>로그인화면</a>
+</form>-->
+
+<a href="logout">로그아웃</a>
 </body>
 </html>

@@ -14,11 +14,11 @@
 <h1>회원가입</h1>
 <br/>
 
-<form action="signup" method="post">
+<form action="signup/sign" method="post">
     <label>User ID</label>
-    <input type="text" name="userId"/>
-    <input type="password" name="password"/>
-    <input type="text" name="email"/>
+    <input type="text" name="userId" placeholder="ID" required/>
+    <input type="password" name="password" placeholder="Password" required/>
+    <input type="text" name="email" placeholder="Email" required/>
     <button type="submit">가입하기</button>
 </form>
 

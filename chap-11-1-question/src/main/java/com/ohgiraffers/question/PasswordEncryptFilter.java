@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 
-@WebFilter("/*")
+@WebFilter("/signup/*")
 public class PasswordEncryptFilter implements Filter {
 
     @Override

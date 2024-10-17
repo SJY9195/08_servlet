@@ -16,10 +16,12 @@
 
 <form action="login" method="post">
     <label>User ID</label>
-    <input type="text" name="userId"/>
-    <input type="password" name="password"/>
+    <input type="text" name="userId" placeholder="User ID" required/>
+    <input type="password" name="password" placeholder="Password" required/>
     <button type="submit">로그인</button>
 </form>
+
+<%=request.getAttribute("errorMessage") !=null ? request.getAttribute("errorMessage") : ""%>
 
 <a href=signup.jsp>가입하기</a>
 </body>

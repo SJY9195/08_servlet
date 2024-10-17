@@ -11,7 +11,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.io.IOException;
 
-@WebServlet("/signup")
+@WebServlet("/signup/sign")
 public class SignUpServlet extends HttpServlet {
 
     @Override
@@ -24,12 +24,13 @@ public class SignUpServlet extends HttpServlet {
         System.out.println("password = " + password);
         System.out.println("email = " + email);
 
-        HttpSession session = req.getSession();
+        HttpSession users = req.getSession();
 
-        session.setAttribute("userId", userId);
-        session.setAttribute("password", password);
+        users.setAttribute("userId", userId);
+        users.setAttribute("password", password);
+        users.setAttribute("email", email);
 
-        resp.sendRedirect("login");
+        resp.sendRedirect("/login.jsp");
 
         /*req.setAttribute("userId", userId);  //setAttribute 는 forward로 밖에 못받는다! 그래서 session에 담아두는게 좋다!
         req.setAttribute("password", password);

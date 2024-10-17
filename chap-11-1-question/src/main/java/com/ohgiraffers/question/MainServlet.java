@@ -5,14 +5,30 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet("/main")
 public class MainServlet extends HttpServlet {
-
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
+        String userId = (session != null) ? (String) session.getAttribute("user") : null;
+
+        if (userId == null) {
+            // 로그인이 안 된 경우 로그인 페이지로 redirect
+            resp.sendRedirect(req.getContextPath() + "/login.jsp");
+        } else {
+            // 로그인된 사용자에게 메인 페이지 제공
+            req.setAttribute("userId", userId);
+            req.getRequestDispatcher("/main.jsp").forward(req, resp);
+        }
+
+    }
+
+    /* 내가 썼던 오답 jsp에 java코드를 쓸줄 몰랐다;;@Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String userId = (String) req.getAttribute("userId");
@@ -36,5 +52,5 @@ public class MainServlet extends HttpServlet {
         out.close();
 
 
-    }
+    } */
 }
