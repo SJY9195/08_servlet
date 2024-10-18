@@ -24,10 +24,8 @@ public class EmployeeListServlet extends HttpServlet {
 
         req.setAttribute("empList", empList);
 
-
         String path="";
         path= "/WEB-INF/views/employee/employeeList.jsp";
-
 
         req.getRequestDispatcher(path).forward(req, resp);
     }

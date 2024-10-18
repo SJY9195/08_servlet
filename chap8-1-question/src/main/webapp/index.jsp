@@ -7,7 +7,6 @@
 <body>
 <h1>게시글 작성</h1>
 
-
 <form action='writepost' method='post'>
     제목: <input type='text' name='title' ><br>
     내용: <textarea name='content'></textarea><br>
