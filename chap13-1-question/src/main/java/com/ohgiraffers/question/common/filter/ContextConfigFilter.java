@@ -1,12 +1,13 @@
-package com.ohgiraffers.mvc.common.filter;
+package com.ohgiraffers.question.common.filter;
 
-import com.ohgiraffers.mvc.common.config.ConfigLocation;
+import com.ohgiraffers.question.common.config.ConfigLocation;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 
 import java.io.IOException;
 
-@WebFilter("/*")
+// 필터를 구현하는 ContextConfigFilter 클래스
+@WebFilter("/*") // 모든 요청에 대해 필터를 적용
 public class ContextConfigFilter implements Filter {
 
     @Override

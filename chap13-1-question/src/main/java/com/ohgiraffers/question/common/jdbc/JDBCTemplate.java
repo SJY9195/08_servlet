@@ -1,8 +1,8 @@
-package com.ohgiraffers.mvc.common.jdbc;
+package com.ohgiraffers.question.common.jdbc;
 
 // jdbc 연결을 관리하는 클래스
 
-import com.ohgiraffers.mvc.common.config.ConfigLocation;
+import com.ohgiraffers.question.common.config.ConfigLocation;
 
 import java.io.FileReader;
 import java.io.IOException;

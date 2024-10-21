@@ -5,6 +5,6 @@
   <title>게시판 초기 화면</title>
 </head>
 <body>
-<a href=./WEB-INF/views/main/main.jsp>게시판 보러가기</a>
+<a href="selectAll">게시판 보러가기</a>
 </body>
 </html>
